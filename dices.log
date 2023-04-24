@@ -21,3 +21,14 @@
 2023-04-20 17:48:18,838 - [DEBUG] Successfully fetched data from the database
 2023-04-20 17:48:18,839 - [DEBUG] Successfully retrieved a list of speeches
 2023-04-20 17:48:33,276 - [DEBUG] Attempting to extend a peechGroup
+2023-04-21 09:54:24,115 - [DEBUG] New log created with Medium Detail
+2023-04-21 09:54:24,115 - [DEBUG] Database Initialized
+2023-04-21 09:54:24,203 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-21 09:54:24,203 - [DEBUG] Retrieving data from the database
+2023-04-21 09:54:32,938 - [DEBUG] Successfully fetched data from the database
+2023-04-21 09:54:32,945 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-21 09:54:33,029 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-21 09:54:33,029 - [DEBUG] Retrieving data from the database
+2023-04-21 09:54:38,871 - [DEBUG] Successfully fetched data from the database
+2023-04-21 09:54:38,881 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-21 09:54:42,899 - [DEBUG] Attempting to extend a peechGroup
