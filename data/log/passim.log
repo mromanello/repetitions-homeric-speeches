@@ -1,0 +1,506 @@
+https://repos.spark-packages.org/ added as a remote repository with the name: repo-1
+:: loading settings :: url = jar:file:/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /Users/matteo/.ivy2/cache
+The jars for the packages stored in: /Users/matteo/.ivy2/jars
+graphframes#graphframes added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-3b5333c8-139d-4ad3-9da8-fe1e933632c7;1.0
+	confs: [default]
+	found graphframes#graphframes;0.8.0-spark3.0-s_2.12 in spark-packages
+	found org.slf4j#slf4j-api;1.7.16 in spark-list
+:: resolution report :: resolve 141ms :: artifacts dl 8ms
+	:: modules in use:
+	graphframes#graphframes;0.8.0-spark3.0-s_2.12 from spark-packages in [default]
+	org.slf4j#slf4j-api;1.7.16 from spark-list in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-3b5333c8-139d-4ad3-9da8-fe1e933632c7
+	confs: [default]
+	0 artifacts copied, 2 already retrieved (0kB/4ms)
+23/04/27 16:33:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Namespace(id='id', text='text', minDF=2, maxDF=100, min_match=5, n=25, floating_ngrams=False, complete_lines=False, gap=600, max_offset=20, beam=20, pcopy=0.8, min_align=50, src_overlap=0.9, dst_overlap=0.5, fields=[], filterpairs='uid < uid2', all_pairs=False, pairwise=False, docwise=False, linewise=False, to_pairs=False, to_extents=False, link_model=None, link_features=None, log_level='WARN', input_format='json', output_format='json', inputPath='input_lemmatised.json', outputPath='out_cluster')
+23/04/27 16:33:40 INFO SparkContext: Running Spark version 3.4.0
+23/04/27 16:33:40 INFO ResourceUtils: ==============================================================
+23/04/27 16:33:40 INFO ResourceUtils: No custom resources configured for spark.driver.
+23/04/27 16:33:40 INFO ResourceUtils: ==============================================================
+23/04/27 16:33:40 INFO SparkContext: Submitted application: Passim Alignment
+23/04/27 16:33:40 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+23/04/27 16:33:40 INFO ResourceProfile: Limiting resource is cpu
+23/04/27 16:33:40 INFO ResourceProfileManager: Added ResourceProfile id: 0
+23/04/27 16:33:40 INFO SecurityManager: Changing view acls to: matteo
+23/04/27 16:33:40 INFO SecurityManager: Changing modify acls to: matteo
+23/04/27 16:33:40 INFO SecurityManager: Changing view acls groups to: 
+23/04/27 16:33:40 INFO SecurityManager: Changing modify acls groups to: 
+23/04/27 16:33:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: matteo; groups with view permissions: EMPTY; users with modify permissions: matteo; groups with modify permissions: EMPTY
+23/04/27 16:33:41 INFO Utils: Successfully started service 'sparkDriver' on port 56253.
+23/04/27 16:33:41 INFO SparkEnv: Registering MapOutputTracker
+23/04/27 16:33:41 INFO SparkEnv: Registering BlockManagerMaster
+23/04/27 16:33:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/04/27 16:33:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/04/27 16:33:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+23/04/27 16:33:41 INFO DiskBlockManager: Created local directory at /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/blockmgr-ec3ee759-daa9-4b09-bf47-e1b3d976f84d
+23/04/27 16:33:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+23/04/27 16:33:41 INFO SparkEnv: Registering OutputCommitCoordinator
+23/04/27 16:33:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+23/04/27 16:33:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+23/04/27 16:33:41 INFO SparkContext: Added JAR file:///Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar at spark://macbook-pro-75:56253/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO SparkContext: Added JAR file:///Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://macbook-pro-75:56253/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO SparkContext: Added file file:///Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar at file:///Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO Utils: Copying /Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar
+23/04/27 16:33:41 INFO SparkContext: Added file file:///Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at file:///Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO Utils: Copying /Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/org.slf4j_slf4j-api-1.7.16.jar
+23/04/27 16:33:41 INFO Executor: Starting executor ID driver on host macbook-pro-75
+23/04/27 16:33:41 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+23/04/27 16:33:41 INFO Executor: Fetching file:///Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO Utils: /Users/matteo/.ivy2/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar has been previously copied to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar
+23/04/27 16:33:41 INFO Executor: Fetching file:///Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO Utils: /Users/matteo/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar has been previously copied to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/org.slf4j_slf4j-api-1.7.16.jar
+23/04/27 16:33:41 INFO Executor: Fetching spark://macbook-pro-75:56253/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO TransportClientFactory: Successfully created connection to macbook-pro-75/192.168.0.177:56253 after 24 ms (0 ms spent in bootstraps)
+23/04/27 16:33:41 INFO Utils: Fetching spark://macbook-pro-75:56253/jars/org.slf4j_slf4j-api-1.7.16.jar to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/fetchFileTemp10082764010800255658.tmp
+23/04/27 16:33:41 INFO Utils: /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/fetchFileTemp10082764010800255658.tmp has been previously copied to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/org.slf4j_slf4j-api-1.7.16.jar
+23/04/27 16:33:41 INFO Executor: Adding file:/private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/org.slf4j_slf4j-api-1.7.16.jar to class loader
+23/04/27 16:33:41 INFO Executor: Fetching spark://macbook-pro-75:56253/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar with timestamp 1682606020777
+23/04/27 16:33:41 INFO Utils: Fetching spark://macbook-pro-75:56253/jars/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/fetchFileTemp18434661019051647154.tmp
+23/04/27 16:33:41 INFO Utils: /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/fetchFileTemp18434661019051647154.tmp has been previously copied to /private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar
+23/04/27 16:33:41 INFO Executor: Adding file:/private/var/folders/8s/rnkbnf8549qclh_gcb_qj_yw0000gv/T/spark-83c28a5a-51bd-4412-8650-fd817f8cd443/userFiles-c9806c32-f56b-4beb-91f3-8eba346bbeff/graphframes_graphframes-0.8.0-spark3.0-s_2.12.jar to class loader
+23/04/27 16:33:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56255.
+23/04/27 16:33:41 INFO NettyBlockTransferService: Server created on macbook-pro-75:56255
+23/04/27 16:33:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/04/27 16:33:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, macbook-pro-75, 56255, None)
+23/04/27 16:33:41 INFO BlockManagerMasterEndpoint: Registering block manager macbook-pro-75:56255 with 434.4 MiB RAM, BlockManagerId(driver, macbook-pro-75, 56255, None)
+23/04/27 16:33:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, macbook-pro-75, 56255, None)
+23/04/27 16:33:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, macbook-pro-75, 56255, None)
+23/04/27 16:33:54 ERROR Utils: Aborting task
+org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+23/04/27 16:33:54 ERROR FileFormatWriter: Job job_202304271633542694920721700995897_0014 aborted.
+23/04/27 16:33:54 ERROR Executor: Exception in task 0.0 in stage 14.0 (TID 10)
+org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+23/04/27 16:33:54 WARN TaskSetManager: Lost task 0.0 in stage 14.0 (TID 10) (macbook-pro-75 executor driver): org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+
+23/04/27 16:33:54 ERROR TaskSetManager: Task 0 in stage 14.0 failed 1 times; aborting job
+23/04/27 16:33:54 ERROR FileFormatWriter: Aborting job e950d498-e72d-4c60-ab57-b0fb9fcff5b7.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 14.0 failed 1 times, most recent failure: Lost task 0.0 in stage 14.0 (TID 10) (macbook-pro-75 executor driver): org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2785)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2721)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2720)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2720)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1206)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1206)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2984)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2923)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2912)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:971)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2263)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeWrite$4(FileFormatWriter.scala:307)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:271)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:304)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:190)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:190)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:104)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:488)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:133)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:856)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:387)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:360)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:789)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+Traceback (most recent call last):
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/share/submit-seriatim.py", line 4, in <module>
+    passim.main(sys.argv[1:])
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/passim/seriatim.py", line 800, in main
+    ).write.mode('ignore').parquet(srcFname)
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1656, in parquet
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 169, in deco
+  File "/Users/matteo/.pyenv/versions/3.10.0/envs/homeric-repetitions/lib/python3.10/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o212.parquet.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 14.0 failed 1 times, most recent failure: Lost task 0.0 in stage 14.0 (TID 10) (macbook-pro-75 executor driver): org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2785)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2721)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2720)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2720)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1206)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1206)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2984)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2923)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2912)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:971)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2263)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeWrite$4(FileFormatWriter.scala:307)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:271)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:304)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:190)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:190)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:104)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:488)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:133)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:856)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:387)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:360)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:789)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: org.apache.spark.SparkException: [TASK_WRITE_FAILED] Task failed while writing rows to file:/Users/matteo/Dropbox/My Mac (MacBook-Pro-9.local)/Documents/repetitions-homeric-speeches/out_cluster/tmp/src.parquet.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:788)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:420)
+	at org.apache.spark.sql.execution.datasources.WriteFilesExec.$anonfun$doExecuteWrite$1(WriteFiles.scala:100)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2(RDD.scala:888)
+	at org.apache.spark.rdd.RDD.$anonfun$mapPartitionsInternal$2$adapted(RDD.scala:888)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:328)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+Caused by: org.apache.spark.SparkRuntimeException: [DUPLICATED_MAP_KEY] Duplicate map key 0 was found, please check the input data. If you want to remove the duplicated keys, you can set "spark.sql.mapKeyDedupPolicy" to "LAST_WIN" so that the key inserted at last takes precedence.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.duplicateMapKeyFoundError(QueryExecutionErrors.scala:1333)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.put(ArrayBasedMapBuilder.scala:69)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.putAll(ArrayBasedMapBuilder.scala:94)
+	at org.apache.spark.sql.catalyst.util.ArrayBasedMapBuilder.from(ArrayBasedMapBuilder.scala:122)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$GroupedIterator.takeDestructively(Iterator.scala:1160)
+	at scala.collection.Iterator$GroupedIterator.go(Iterator.scala:1176)
+	at scala.collection.Iterator$GroupedIterator.fill(Iterator.scala:1213)
+	at scala.collection.Iterator$GroupedIterator.hasNext(Iterator.scala:1217)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:320)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$1.writeIteratorToStream(PythonUDFRunner.scala:57)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:440)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:274)
+

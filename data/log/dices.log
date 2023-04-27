@@ -1,0 +1,95 @@
+2023-04-20 17:43:09,380 - [DEBUG] New log created with Medium Detail
+2023-04-20 17:43:09,380 - [DEBUG] Database Initialized
+2023-04-20 17:43:18,123 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-20 17:43:18,123 - [DEBUG] Retrieving data from the database
+2023-04-20 17:43:22,373 - [DEBUG] Successfully fetched data from the database
+2023-04-20 17:43:22,380 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-20 17:47:33,081 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-20 17:47:33,082 - [DEBUG] Retrieving data from the database
+2023-04-20 17:47:37,194 - [DEBUG] Successfully fetched data from the database
+2023-04-20 17:47:37,195 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-20 17:47:46,519 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-20 17:47:46,519 - [DEBUG] Retrieving data from the database
+2023-04-20 17:47:50,682 - [DEBUG] Successfully fetched data from the database
+2023-04-20 17:47:50,693 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-20 17:48:09,728 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-20 17:48:09,734 - [DEBUG] Retrieving data from the database
+2023-04-20 17:48:13,695 - [DEBUG] Successfully fetched data from the database
+2023-04-20 17:48:13,696 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-20 17:48:14,853 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-20 17:48:14,853 - [DEBUG] Retrieving data from the database
+2023-04-20 17:48:18,838 - [DEBUG] Successfully fetched data from the database
+2023-04-20 17:48:18,839 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-20 17:48:33,276 - [DEBUG] Attempting to extend a peechGroup
+2023-04-21 09:54:24,115 - [DEBUG] New log created with Medium Detail
+2023-04-21 09:54:24,115 - [DEBUG] Database Initialized
+2023-04-21 09:54:24,203 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-21 09:54:24,203 - [DEBUG] Retrieving data from the database
+2023-04-21 09:54:32,938 - [DEBUG] Successfully fetched data from the database
+2023-04-21 09:54:32,945 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-21 09:54:33,029 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-21 09:54:33,029 - [DEBUG] Retrieving data from the database
+2023-04-21 09:54:38,871 - [DEBUG] Successfully fetched data from the database
+2023-04-21 09:54:38,881 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-21 09:54:42,899 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 15:21:30,190 - [DEBUG] New log created with Medium Detail
+2023-04-27 15:21:30,190 - [DEBUG] New log created with Medium Detail
+2023-04-27 15:21:30,217 - [DEBUG] Database Initialized
+2023-04-27 15:21:30,217 - [DEBUG] Database Initialized
+2023-04-27 15:21:36,030 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:21:36,030 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:21:36,032 - [DEBUG] Retrieving data from the database
+2023-04-27 15:21:36,032 - [DEBUG] Retrieving data from the database
+2023-04-27 15:21:41,520 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:21:41,520 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:21:41,571 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:21:41,571 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:21:41,677 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:21:41,677 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:21:41,677 - [DEBUG] Retrieving data from the database
+2023-04-27 15:21:41,677 - [DEBUG] Retrieving data from the database
+2023-04-27 15:21:46,844 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:21:46,844 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:21:46,856 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:21:46,856 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:21:47,846 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 15:21:47,846 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 15:30:18,070 - [DEBUG] New log created with Medium Detail
+2023-04-27 15:30:18,070 - [DEBUG] Database Initialized
+2023-04-27 15:30:18,137 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:30:18,138 - [DEBUG] Retrieving data from the database
+2023-04-27 15:30:24,629 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:30:24,637 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:30:24,700 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 15:30:24,701 - [DEBUG] Retrieving data from the database
+2023-04-27 15:30:29,715 - [DEBUG] Successfully fetched data from the database
+2023-04-27 15:30:29,725 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 15:30:29,779 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 16:19:57,870 - [DEBUG] New log created with Medium Detail
+2023-04-27 16:19:57,870 - [DEBUG] New log created with Medium Detail
+2023-04-27 16:19:57,871 - [DEBUG] Database Initialized
+2023-04-27 16:19:57,871 - [DEBUG] Database Initialized
+2023-04-27 16:19:58,293 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 16:19:58,293 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 16:19:58,294 - [DEBUG] Retrieving data from the database
+2023-04-27 16:19:58,294 - [DEBUG] Retrieving data from the database
+2023-04-27 16:20:03,026 - [DEBUG] Successfully fetched data from the database
+2023-04-27 16:20:03,026 - [DEBUG] Successfully fetched data from the database
+2023-04-27 16:20:03,036 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 16:20:03,036 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 16:20:07,423 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 16:20:07,423 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-04-27 16:20:07,424 - [DEBUG] Retrieving data from the database
+2023-04-27 16:20:07,424 - [DEBUG] Retrieving data from the database
+2023-04-27 16:20:13,213 - [DEBUG] Successfully fetched data from the database
+2023-04-27 16:20:13,213 - [DEBUG] Successfully fetched data from the database
+2023-04-27 16:20:13,222 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 16:20:13,222 - [DEBUG] Successfully retrieved a list of speeches
+2023-04-27 16:20:17,166 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 16:20:17,166 - [DEBUG] Attempting to extend a peechGroup
+2023-04-27 16:37:06,806 - [DEBUG] New log created with Medium Detail
+2023-04-27 16:37:06,806 - [DEBUG] New log created with Medium Detail
+2023-04-27 16:37:06,806 - [DEBUG] New log created with Medium Detail
+2023-04-27 16:37:06,806 - [DEBUG] Database Initialized
+2023-04-27 16:37:06,806 - [DEBUG] Database Initialized
+2023-04-27 16:37:06,806 - [DEBUG] Database Initialized
