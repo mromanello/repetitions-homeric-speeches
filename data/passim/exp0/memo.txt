@@ -1,0 +1,1 @@
+/home/romanell/Documents/impresso/passim/bin/passim -n 1 --min-match 1 -a 5 --max-repeat 100 -w 1 data/input/input_lemmatised.json data/passim/out_cluster
