@@ -1,0 +1,1 @@
+/home/romanell/Documents/impresso/passim/bin/passim -n 3 --min-match 3 --max-repeat 100 -w 1 data/input/input_lemmatised.json data/passim/exp2
