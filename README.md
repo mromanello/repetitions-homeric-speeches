@@ -47,3 +47,5 @@ First results available [here](https://docs.google.com/spreadsheets/d/1Aa0YiP9nz
 | `exp2`|`-n 3 --min-match 3 --max-repeat 100 -w 1`|reused passages consist of at least 3 shared n-grams of size 3 (tri-grams)|24|
 | `exp3`|`-n 3 --min-match 3 --max-repeat 100 -a 10`|reused passages consist of at least 3 shared n-grams of size 3, and the aligned passage should be at least 10 characters long (default is `20`)|41|
 | `exp4`|`-n 2 --min-match 2 --max-repeat 100 -a 10`|reused passages consist of at least 2 shared n-grams of size 2 (bi-grams), and the aligned passage should be at least 10 characters long (default is `20`)|212|
+| `exp5`|`-n 3 --min-match 1 --max-repeat 100 -a 10`|reused passages consist of at least 1 shared n-grams of size 3 (tri-grams), and the aligned passage should be at least 10 characters long (default is `20`)|41|
+| `exp6`|`-n 4 --min-match 1 --max-repeat 100 -a 10`|reused passages consist of at least 1 shared n-grams of size 4 (bi-grams), and the aligned passage should be at least 10 characters long (default is `20`)|36|
