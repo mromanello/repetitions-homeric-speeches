@@ -106,3 +106,37 @@
 2023-05-08 22:24:59,525 - [DEBUG] Attempting to extend a peechGroup
 2023-05-08 22:25:02,404 - [DEBUG] Attempting to extend a peechGroup
 2023-05-08 22:41:15,249 - [WARNING] Failed to download urn:cts:greekLit:tlg0012.tlg002.perseus-grc2:10.456-10.465: 500 Server Error: INTERNAL SERVER ERROR for url: https://scaife-cts.perseus.org/api/cts?urn=urn%3Acts%3AgreekLit%3Atlg0012.tlg002.perseus-grc2%3A10.456-10.465&request=GetPassage
+2023-05-10 14:56:08,423 - [DEBUG] New log created with Medium Detail
+2023-05-10 14:56:08,423 - [DEBUG] Database Initialized
+2023-05-10 14:56:10,436 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:56:10,436 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:17,472 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:17,501 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:17,789 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:57:17,789 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:23,609 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:23,618 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:29,623 - [DEBUG] New log created with Medium Detail
+2023-05-10 14:57:29,623 - [DEBUG] New log created with Medium Detail
+2023-05-10 14:57:29,623 - [DEBUG] Database Initialized
+2023-05-10 14:57:29,623 - [DEBUG] Database Initialized
+2023-05-10 14:57:30,506 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:57:30,506 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:57:30,506 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:30,506 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:37,384 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:37,384 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:37,391 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:37,391 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:37,511 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:57:37,511 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-05-10 14:57:37,511 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:37,511 - [DEBUG] Retrieving data from the database
+2023-05-10 14:57:43,577 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:43,577 - [DEBUG] Successfully fetched data from the database
+2023-05-10 14:57:43,585 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:43,585 - [DEBUG] Successfully retrieved a list of speeches
+2023-05-10 14:57:43,657 - [DEBUG] Attempting to extend a peechGroup
+2023-05-10 14:57:43,657 - [DEBUG] Attempting to extend a peechGroup
+2023-05-10 15:17:49,716 - [WARNING] Failed to download urn:cts:greekLit:tlg0012.tlg002.perseus-grc2:10.456-10.465: 500 Server Error: INTERNAL SERVER ERROR for url: https://scaife-cts.perseus.org/api/cts?urn=urn%3Acts%3AgreekLit%3Atlg0012.tlg002.perseus-grc2%3A10.456-10.465&request=GetPassage
+2023-05-10 15:17:49,716 - [WARNING] Failed to download urn:cts:greekLit:tlg0012.tlg002.perseus-grc2:10.456-10.465: 500 Server Error: INTERNAL SERVER ERROR for url: https://scaife-cts.perseus.org/api/cts?urn=urn%3Acts%3AgreekLit%3Atlg0012.tlg002.perseus-grc2%3A10.456-10.465&request=GetPassage
