@@ -13,7 +13,7 @@ def read_jsonl(d) -> List:
   """Read a directory of JSON line files."""
   return list(itertools.chain.from_iterable([read_jsonl_file(open(f)) for f in glob.glob(d + '/*.json')]))
 
-def passim_output_to_dataframe(output_path, dataframe_path, columns_to_keep=['cluster', 'id', 'label', 'dices_tags', 'text', 'raw_text']) -> pd.DataFrame:
+def passim_output_to_dataframe(output_path, dataframe_path, columns_to_keep=['cluster', 'id', 'label', 'dices_tags', 'text', 'raw_text', 'speaker', 'addressee']) -> pd.DataFrame:
     tr_clusters = pd.DataFrame(read_jsonl(output_path))
     print(f'There are {tr_clusters.cluster.unique().size} text reuse clusters in {output_path}')
     output_df = tr_clusters[columns_to_keep]
@@ -31,6 +31,8 @@ def speeches_to_passim(speeches_df : pd.DataFrame, json_path : str, lemmatised=F
             "label": row.label,
             "dices_speech_id": row.speech_id,
             "dices_tags": row.dices_tags,
+            "speaker": row.speaker,
+            "addressee": row.addressee,
             "text": row.lemmatised_filtered_text if lemmatised else row.text,
             "raw_text": row.text if lemmatised else None,
             "passage_urn": row.passage_urn
