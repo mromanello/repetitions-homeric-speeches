@@ -140,3 +140,37 @@
 2023-05-10 14:57:43,657 - [DEBUG] Attempting to extend a peechGroup
 2023-05-10 15:17:49,716 - [WARNING] Failed to download urn:cts:greekLit:tlg0012.tlg002.perseus-grc2:10.456-10.465: 500 Server Error: INTERNAL SERVER ERROR for url: https://scaife-cts.perseus.org/api/cts?urn=urn%3Acts%3AgreekLit%3Atlg0012.tlg002.perseus-grc2%3A10.456-10.465&request=GetPassage
 2023-05-10 15:17:49,716 - [WARNING] Failed to download urn:cts:greekLit:tlg0012.tlg002.perseus-grc2:10.456-10.465: 500 Server Error: INTERNAL SERVER ERROR for url: https://scaife-cts.perseus.org/api/cts?urn=urn%3Acts%3AgreekLit%3Atlg0012.tlg002.perseus-grc2%3A10.456-10.465&request=GetPassage
+2023-10-23 13:40:46,055 - [DEBUG] New log created with Medium Detail
+2023-10-23 13:40:46,055 - [DEBUG] Database Initialized
+2023-10-23 13:40:58,680 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:40:58,680 - [DEBUG] Retrieving data from the database
+2023-10-23 13:42:52,452 - [DEBUG] New log created with Medium Detail
+2023-10-23 13:42:52,452 - [DEBUG] New log created with Medium Detail
+2023-10-23 13:42:52,453 - [DEBUG] Database Initialized
+2023-10-23 13:42:52,453 - [DEBUG] Database Initialized
+2023-10-23 13:42:57,756 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:42:57,756 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:42:57,756 - [DEBUG] Retrieving data from the database
+2023-10-23 13:42:57,756 - [DEBUG] Retrieving data from the database
+2023-10-23 13:43:01,730 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:43:01,730 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:43:01,739 - [DEBUG] Successfully retrieved a list of speeches
+2023-10-23 13:43:01,739 - [DEBUG] Successfully retrieved a list of speeches
+2023-10-23 13:43:13,231 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:43:13,231 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:43:13,232 - [DEBUG] Retrieving data from the database
+2023-10-23 13:43:13,232 - [DEBUG] Retrieving data from the database
+2023-10-23 13:43:17,417 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:43:17,417 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:43:17,426 - [DEBUG] Successfully retrieved a list of speeches
+2023-10-23 13:43:17,426 - [DEBUG] Successfully retrieved a list of speeches
+2023-10-23 13:43:22,564 - [DEBUG] Attempting to extend a peechGroup
+2023-10-23 13:43:22,564 - [DEBUG] Attempting to extend a peechGroup
+2023-10-23 13:52:21,547 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:52:21,547 - [DEBUG] Attempting to fetch a SpeechGroup
+2023-10-23 13:52:21,547 - [DEBUG] Retrieving data from the database
+2023-10-23 13:52:21,547 - [DEBUG] Retrieving data from the database
+2023-10-23 13:52:21,735 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:52:21,735 - [DEBUG] Successfully fetched data from the database
+2023-10-23 13:52:21,736 - [DEBUG] Successfully retrieved a list of speeches
+2023-10-23 13:52:21,736 - [DEBUG] Successfully retrieved a list of speeches
