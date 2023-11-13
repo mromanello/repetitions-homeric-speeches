@@ -256,6 +256,7 @@ class ClusterMatch(object):
         return self.pred_cluster.size > self.gt_cluster.size
     
     def inspect(self) -> None:
+        print(f'Match type: {self.type}')
         print(f'GT cluster {self.gt_cluster.id}')
         for p in self.gt_cluster.passages:
             print(f"\t({p.locus}) {p.text}")

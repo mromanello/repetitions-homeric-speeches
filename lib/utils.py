@@ -19,3 +19,26 @@ def passim_output_to_dataframe(output_path, dataframe_path, columns_to_keep=['cl
     output_df = tr_clusters[columns_to_keep]
     output_df.to_csv(dataframe_path)
     return output_df
+
+def speeches_to_passim(speeches_df : pd.DataFrame, json_path : str, lemmatised=False) -> None:
+    """
+    Transform a DataFrame containing DICES speeches into a JSON file amenable to passim.
+    """
+    docs = [
+        {
+            "id" : idx,
+            "group": row.group,
+            "label": row.label,
+            "dices_speech_id": row.speech_id,
+            "dices_tags": row.dices_tags,
+            "text": row.lemmatised_filtered_text if lemmatised else row.text,
+            "raw_text": row.text if lemmatised else None,
+            "passage_urn": row.passage_urn
+        }
+        for idx, row in speeches_df.iterrows()
+    ]
+
+    # write passim docs to JSON file
+    with open(json_path, 'w', encoding='utf-8') as f:
+        for d in docs:
+            print(json.dumps(d, ensure_ascii=False), file=f)
