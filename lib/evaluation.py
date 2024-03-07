@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import List, Optional
+from typing import List, Optional, Set
 from .utils import read_jsonl
 
 class Locus(object):
@@ -54,6 +54,7 @@ class TextReuseCluster(object):
         self._id = cluster_id
         self._passages = passages
         self._matched_predictions = []
+        self._intra_cluster_similarity = None
 
     @property
     def id(self):
@@ -69,8 +70,7 @@ class TextReuseCluster(object):
     
     @property
     def matched_predictions(self):
-        # TODO return a list sorted by some criterion
-        return self._matched_predictions
+        return sorted(self._matched_predictions, key=lambda x: x.inter_cluster_overlap, reverse=True)
     
     @matched_predictions.setter
     def matched_predictions(self, match):
@@ -123,11 +123,12 @@ class TextReuseEvaluator(object):
     def __init__(self) -> None:
         self._gt_clusters = []
         self._pred_clusters = []
+        self._eval_data = {}
 
     def _match_predictions(self) -> None:
         """
         Iterate through GT clusters and find predicted
-        clusters that match, based on loci (done) + textual overlap (tbd)
+        clusters that match, based on loci + textual overlap
         """
         for gt_cluster in self.gt_clusters.values():
             for pred_cluster in self.predicted_clusters.values():
@@ -141,6 +142,21 @@ class TextReuseEvaluator(object):
                 if match:
                     gt_cluster.matched_predictions = match
 
+    def print_summary(self) -> None:
+        
+        print(f"# of ground-truth clusters: {len(self.gt_clusters.values())}")
+        print(f"# of matched clusters: {self._eval_data['n_matched_clusters']}")
+        print(f"# of unmatched clusters: {self._eval_data['n_unmatched_clusters']}")
+        print('\n')
+        print(f"# of partially matched clusters: {self._eval_data['n_partial_clusters']}")
+        print(f"# of exactly matched clusters: {self._eval_data['n_exact_clusters']}")
+        print(f"# of clusters with spurious passages: {self._eval_data['n_spurious_clusters']}")
+        print('\n')
+        print(f"# of ground-truth passages: {self._eval_data['n_gt_passages']}")
+        print(f"# of matched passages (TP): {self._eval_data['n_matched_passages']}")
+        print(f"# of missed passages (FN): {self._eval_data['n_missed_passages']}")
+        print(f"# of spurious passages (FP): {self._eval_data['n_spurious_passages']}")
+    
     def evaluate(self) -> None:
         """
         Evaluate the predicted clusters and print an evaluation summary.
@@ -148,39 +164,103 @@ class TextReuseEvaluator(object):
 
         self._match_predictions()
 
-        n_matched = sum([
+        ##################
+        # Cluster-level  #
+        ##################
+
+        self._eval_data['n_predicted_clusters'] = len(self.predicted_clusters.values())
+
+        self._eval_data['n_matched_clusters'] = sum([
             len(cluster.matched_predictions) > 0
             for cluster in self.gt_clusters.values()    
         ])
 
-        n_unmatched = len(self.gt_clusters.values()) - n_matched
+        n_unmatched = len(self.gt_clusters.values()) - self._eval_data['n_matched_clusters']
+        self._eval_data['n_unmatched_clusters'] = n_unmatched
 
-        n_exact = len([
+        self._eval_data['n_exact_clusters'] = len([
             m
             for m in self.matches
             if m.is_exact()
         ])
 
-        n_partial = len([
+        self._eval_data['n_partial_clusters'] = len([
             m
             for m in self.matches
             if m.is_partial()
         ])
 
-        n_spurious = len([
+        self._eval_data['n_spurious_clusters'] = len([
             m
             for m in self.matches
             if m.is_spurious()
         ])
+        
+        ##################
+        # Passage-level  #
+        ##################
 
-        print(f'# of ground-truth cluster: {len(self.gt_clusters.values())}')
-        print(f'# of matched clusters: {n_matched}')
-        print(f'# of unmatched clusters: {n_unmatched}')
-        print('\n')
-        print(f'# of partially matched clusters: {n_partial}')
-        print(f'# of exactly matched clusters: {n_exact}')
-        print(f'# of clusters with spurious passages: {n_spurious}')
-        return
+        self._eval_data['n_gt_passages'] = sum([
+            cluster.size
+            for cluster in self.gt_clusters.values()   
+        ])
+
+        self._eval_data['n_matched_passages'] = sum([
+            match.n_matched_passages
+            for match in self.matches
+        ])
+
+        # missed passages from matched clusters
+        self._eval_data['n_missed_passages'] = sum([
+            match.n_missing_passages
+            for match in self.matches
+        ])
+
+        # missed passages from unmatched clusters
+        self._eval_data['n_missed_passages'] += sum([
+            cluster.size
+            for cluster in self.gt_clusters.values()  
+            if len(cluster.matched_predictions) == 0  
+        ])
+
+        self._eval_data['n_spurious_passages'] = sum([
+            match.n_spurious_passages
+            for match in self.matches
+        ])
+
+        self._eval_data['pct_matched_clusters'] = round((
+            self._eval_data['n_matched_clusters'] / len(self.gt_clusters.values())
+        ) * 100, 2)
+
+        self._eval_data['pct_exact_clusters'] = round((
+            self._eval_data['n_exact_clusters'] / self._eval_data['n_matched_clusters']
+        ) * 100, 2)
+
+        self._eval_data['pct_partial_clusters'] = round((
+            self._eval_data['n_partial_clusters'] / self._eval_data['n_matched_clusters']
+        ) * 100, 2)
+
+        self._eval_data['pct_spurious_clusters'] = round((
+            self._eval_data['n_spurious_clusters'] / self._eval_data['n_matched_clusters']
+        ) * 100, 2)
+
+        ################################
+        # Precision, Recall, F1-Score  #
+        ################################
+
+        tp = self._eval_data['n_matched_passages']
+        fp = self._eval_data['n_spurious_passages']
+        fn = self._eval_data['n_missed_passages']
+
+        p = tp / (tp + fp)
+        r = tp / (tp + fn)
+        f1 = (2 * p * r) / (p + r)
+
+        self._eval_data['precision'] = round(p, 3)
+        self._eval_data['recall'] = round(r, 3)
+        self._eval_data['f1-score'] = round(f1, 3)
+        
+        return self._eval_data
     
     @property
     def matches(self) -> None:
@@ -231,8 +311,21 @@ class ClusterMatch(object):
         self.gt_cluster = gt_cluster
         self.pred_cluster = pred_cluster
         self._loci_overlap = loci_overlap
-        self._n_spurious_passages = pred_cluster.size - gt_cluster.size if pred_cluster.size > gt_cluster.size else 0
-        self._n_missing_passages = gt_cluster.size - pred_cluster.size if  gt_cluster.size > pred_cluster.size else 0
+        self._inter_cluster_overlap = compute_word_overlap(
+            [
+                "\n".join([p. text for p in self.gt_cluster.passages]),
+                "\n".join([p. text for p in self.pred_cluster.passages])
+            ]
+        )
+        self._n_spurious_passages = pred_cluster.size - self._loci_overlap
+        self._n_missing_passages = gt_cluster.size - self._loci_overlap
+        self._n_matched_passages = self._loci_overlap
+
+        assert self._n_matched_passages + self._n_spurious_passages == pred_cluster.size
+        assert self._n_matched_passages + self._n_missing_passages == gt_cluster.size
+        #print(f'Spurious passages: {self._n_spurious_passages}')
+        #print(f'Missing passages: {self._n_missing_passages}')
+        #print(f'Matched passages: {self._n_matched_passages}')
 
     @property
     def type(self) -> str:
@@ -243,20 +336,26 @@ class ClusterMatch(object):
         elif self.is_spurious():
             match_type = 'spurious'
         else:
+            # NOTE: match_type should never be None!
             match_type = None
         return f"{match_type}-match"
     
     def is_exact(self) -> bool:
-        return self.gt_cluster.size == self.pred_cluster.size
+        return self.gt_cluster.size == self.pred_cluster.size == self._loci_overlap
 
     def is_partial(self) -> bool:
-        return self.gt_cluster.size > self.pred_cluster.size
+        return self._n_missing_passages > 0
     
     def is_spurious(self) -> bool:
-        return self.pred_cluster.size > self.gt_cluster.size
+        return self._n_spurious_passages > 0
+    
+    @property
+    def inter_cluster_overlap(self) -> float:
+        return self._inter_cluster_overlap
     
     def inspect(self) -> None:
         print(f'Match type: {self.type}')
+        print(f'Word similarity: {self.inter_cluster_overlap}')
         print(f'GT cluster {self.gt_cluster.id}')
         for p in self.gt_cluster.passages:
             print(f"\t({p.locus}) {p.text}")
@@ -274,9 +373,13 @@ class ClusterMatch(object):
     @property
     def n_missing_passages(self) -> int:
         return self._n_missing_passages
+    
+    @property
+    def n_matched_passages(self) -> int:
+        return self._n_matched_passages
 
     def __repr__(self) -> str:
-        return f"<Match: GT cluster[{self.gt_cluster.id}] with predicted cluster[{self.pred_cluster.id}] ({self.type})>"
+        return f"<Match: GT cluster[{self.gt_cluster.id}] with predicted cluster[{self.pred_cluster.id}] ({self.type}, word overlap: {self.inter_cluster_overlap})>"
 
 def read_passim_output(path : str) -> List[TextReusePassage]:
         passages = read_jsonl(path)
@@ -346,3 +449,19 @@ def compare_tr_clusters(gt_cluster, pred_cluster) -> Optional[ClusterMatch]:
     
     if overlap >= 2:
         return ClusterMatch(gt_cluster, pred_cluster, overlap)
+    
+def compute_word_overlap(texts : List[str]) -> float:
+    # total number of words to compute the overlap percentage
+    word_sets = [
+        set([
+            ''.join(filter(lambda x: x.isalpha() or x.isdigit() or x.isspace(), tok))
+            for tok in text.split()
+        ])
+        for text in texts
+    ]
+    total_word_n = len(set.union(*word_sets))
+    overlapping_words = set.intersection(*word_sets)
+    #for n, ws in enumerate(word_sets):
+    #    print(f'Word set {n+1}: {ws}')
+    #print(f'Overlapping words: {overlapping_words}')
+    return (len(overlapping_words)/total_word_n)*100
