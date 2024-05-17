@@ -1,0 +1,10 @@
+[
+    {
+        "label": "exp6",
+        "algorithm": "passim",
+        "parameters": "-n 4 --min-match 1 -a 10 --max-repeat 100",
+        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/passim/exp6/",
+        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/passim/exp6/out.json/"
+    }
+]
