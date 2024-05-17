@@ -2,33 +2,25 @@
     {
         "algorithm": "seriatim",
         "parameters": "-n 5 --src-overlap 0.8 --dst-overlap 0.8 --min-match 1 -a 10 --minDF 2 --maxDF 100",
-        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
-        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp12/",
-        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp12/out.json/",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp12/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp12/out.json/",
         "label": "exp12"
     },
     {
         "algorithm": "seriatim",
         "parameters": "-n 40 --min-match 1 -a 10 --minDF 2 --maxDF 100 --all-pairs",
-        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
-        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp9/",
-        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp9/out.json/",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp9/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp9/out.json/",
         "label": "exp9" 
     },
     {
         "algorithm": "seriatim",
         "parameters": "-n 40 --min-match 1 -a 10 --minDF 2 --maxDF 100 --all-pairs --floating-ngrams",
-        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
-        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp9a/",
-        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp9a/out.json/",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp9a/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/seriatim/exp9a/out.json/",
         "label": "exp9a" 
-    },
-    {
-        "algorithm": "seriatim",
-        "parameters": "-n 42 --min-match 1 -a 10 --minDF 2 --maxDF 100 --all-pairs",
-        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
-        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp-new/",
-        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/seriatim/exp-new/out.json/",
-        "label": "exp-new" 
     }
 ]

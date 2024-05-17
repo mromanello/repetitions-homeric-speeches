@@ -1,10 +1,58 @@
 [
     {
+        "label": "exp0",
+        "algorithm": "passim",
+        "parameters": "-n 1 --min-match 1 -a 5",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp0/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp0/out.json/"
+    },
+    {
+        "label": "exp4",
+        "algorithm": "passim",
+        "parameters": "-n 2 --min-match 2 -a 10",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp4/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp4/out.json/"
+    }, 
+    {
+        "label": "exp5",
+        "algorithm": "passim",
+        "parameters": "-n 3 --min-match 1 -a 10",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp5/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp5/out.json/"
+    },    
+    {
         "label": "exp6",
         "algorithm": "passim",
+        "parameters": "-n 4 --min-match 1 -a 10",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-redo/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-redo/out.json/"
+    },
+    {
+        "label": "exp7",
+        "algorithm": "passim",
+        "parameters": "-n 3 --min-match 2 -a 10",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp7/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp7/out.json/"
+    },
+    {
+        "label": "exp6-lemmat",
+        "algorithm": "passim",
         "parameters": "-n 4 --min-match 1 -a 10 --max-repeat 100",
-        "input_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_raw.json",
-        "output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/passim/exp6/",
-        "json_output_path": "/Users/matteo/Documents/repetitions-homeric-speeches/data/passim/exp6/out.json/"
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_lemmatised.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-lemmat/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-lemmat/out.json/"
+    },
+    {
+        "label": "exp6-lemmat-filter",
+        "algorithm": "passim",
+        "parameters": "-n 4 --min-match 1 -a 10 --max-repeat 100",
+        "input_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/input/homeric_speeches_lemmatised_filtered.json",
+        "output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-lemmat-filter/",
+        "json_output_path": "/Users/mromanel/Documents/repetitions-homeric-speeches/data/passim/exp6-lemmat-filter/out.json/"
     }
 ]
