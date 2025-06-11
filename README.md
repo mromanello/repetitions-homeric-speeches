@@ -1,21 +1,35 @@
 # Exploring repetitions in Homeric speeches
 
-Authors: Ombretta Cesca (UNIL) and Matteo Romanello (UNIL)
+[Add Zenodo DOI]
 
-This repository contains work-in-progress code & data concerning the automatic extraction of repetitions from Homeric speeches contained in the DICES database with passim (v. 1.0).
+Authors: [Ombretta Cesca (UNIL)](https://orcid.org/0000-0002-0658-8998) and [Matteo Romanello (UNIL)](https://orcid.org/0000-0002-7406-6286).
 
-## Experiments
+This repository contains code & data concerning the automatic extraction of repetitions from Homeric speeches contained in the [DICES](https://github.com/cwf2/dices) database with [passim](https://github.com/dasmiq/passim), as described in the following publication:
 
+> O. Cesca and M. Romanello. (forthcoming) "A Computational Approach to Characters’ Intentional Repetitions in Homeric Epic" in *A Computational Approach to Characters’ Intentional Repetitions in Homeric Epic*, C. W. Forstall & B. Verhelst (edds.), De Gruyter Brill. 
 
-| Experiment ID     | Passim parameters | Explanation  | \# of extracted clusters | Evaluation |
-| ----------- | ----------- |----------|------------|-------------------|
-| `exp0`      | `-n 1 --min-match 1 -a 5` | reused passages consist of at least 1 shared n-grams of size 1 (uni-gram) | 6419 (lemmatised); 7993 (raw) | # of ground-truth cluster: 69, # of matched clusters: 22, # of unmatched clusters: 47, # of partially matched clusters: 2, # of exactly matched clusters: 2, # of clusters with spurious passages: 18|
-| `exp4`|`-n 2 --min-match 2 --max-repeat 100 -a 10`|reused passages consist of at least 2 shared n-grams of size 2 (bi-grams), and the aligned passage should be at least 10 characters long (default is `20`)|1909 (lemmatised), 2078 (raw)|# of ground-truth cluster: 69, # of matched clusters: 46, # of unmatched clusters: 23, # of partially matched clusters: 2, # of exactly matched clusters: 20, # of clusters with spurious passages: 24|
-| `exp5`|`-n 3 --min-match 1 --max-repeat 100 -a 10`|reused passages consist of at least 1 shared n-grams of size 3 (tri-grams), and the aligned passage should be at least 10 characters long (default is `20`)|350 (lemmatised), 431 (raw)|# of ground-truth cluster: 69, # of matched clusters: 58, # of unmatched clusters: 11, # of partially matched clusters: 3, # of exactly matched clusters: 44, # of clusters with spurious passages: 11|
-| `exp6`|`-n 4 --min-match 1 --max-repeat 100 -a 10`|reused passages consist of at least 1 shared n-grams of size 4 (bi-grams), and the aligned passage should be at least 10 characters long (default is `20`)|284 (lemmatised), 341 (raw)|# of ground-truth cluster: 69, # of matched clusters: 58, # of unmatched clusters: 11, # of partially matched clusters: 3, # of exactly matched clusters: 47, # of clusters with spurious passages: 8|
-| `exp7`|`-n 3 --min-match 2 --max-repeat 100 -a 10`|reused passages consist of at least 1 shared n-grams of size 3 (tri-grams), and the aligned passage should be at least 10 characters long (default is `20`)|350 (lemmatised), 431 (raw)|# of ground-truth cluster: 69, # of matched clusters: 58, # of unmatched clusters: 11, # of partially matched clusters: 3, # of exactly matched clusters: 44, # of clusters with spurious passages: 11|
+## Code
 
-## Dices tags
+Here is an overview of the notebooks contained in this repository:
+
+| Notebook  | Description |
+| ------------- | ------------- |
+| [Get data.ipynb](./notebooks/Get%20data.ipynb) | Retrieve Homeric speeches from DICES DB; fetch full-text from Perseus and apply CLTK processing (lemmatisation); convert data to a Pandas dataframe and then to passim's JSON format.  |
+| [Experiments.ipynb](./notebooks/Experiments.ipynb) | Run the passim experiments according to the configurations specified in files `data/experiments_*.json`.  |
+| [Evaluation.ipynb](./notebooks/Evaluation.ipynb) | Run (some) evaluation and inspect closely the results. | 
+| [Final evaluation.ipynb](./notebooks/Final%20evaluation.ipynb) |  Run the (final) evaluation of all epxeriments and produce the results table for the publication. | 
+| [Analysis.ipynb](./notebooks/Final%20evaluation.ipynb) | Some basic stats of repetitions extracted with the best performing configuration, before and after manual curation (to remove embedded speeches). |
+
+## Data
+
+The file [`homeric_repetitions_dataset.tsv`](./data/homeric_repetitions_dataset.tsv) contains the ground-truth dataset used to evaluate the accuracy of automatically extracting repetitions with [passim](https://github.com/dasmiq/passim). This dataset was created manually by O. Cesca and contains repetitions found in the *Iliad*.  It consists of 69 sets of repetitions (i.e. clusters), each containing two or more text passages where the repeated text is found, for a total of 147 repeated passages of varying length. Each passage is linked to the corresponding speech in the DICES database.
+
+## DICE tags
+
+<details>
+<summary>
+Show table with expansion of tags
+</summary>
 
 Since these are not commented anywhere, here is the full list of tags and their explanation:
 
@@ -48,3 +62,4 @@ Since these are not commented anywhere, here is the full list of tags and their 
 | vit | Vituperation|
 | vow | Promise and Oath|
 | war | Warning|
+</details>
