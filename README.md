@@ -1,6 +1,7 @@
 # Exploring repetitions in Homeric speeches
 
-[Add Zenodo DOI]
+[![DOI](https://doi.org/10.5281/zenodo.15637935.svg)](https://doi.org/10.5281/zenodo.15637935)
+
 
 Authors: [Ombretta Cesca (UNIL)](https://orcid.org/0000-0002-0658-8998) and [Matteo Romanello (UNIL)](https://orcid.org/0000-0002-7406-6286).
 
